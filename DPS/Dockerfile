@@ -2,7 +2,7 @@ FROM python:3.12.2-slim-bullseye
 
 WORKDIR /usr/src/DPS
 
-RUN apt-get update && apt-get install -y netcat
+RUN apt-get update && apt-get install -y netcat && apt-get install -y poppler-utils
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
