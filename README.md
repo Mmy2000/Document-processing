@@ -36,6 +36,20 @@ Welcome to the Document Processing API! This application allows users to upload 
    ```bash
    git clone <repository-url>
    cd project-name
+   
+2. **Install Dependencies**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   
+3. **Run Migrations**:
+   ```bash
+   python manage.py migrate
+   
+4. **Run the Server**:
+   ```bash
+   python manage.py runserver
 
 ## URLS
   - **url documentaion** : https://documenter.getpostman.com/view/31929307/2sAYJ9BecZ
