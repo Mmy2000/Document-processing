@@ -8,19 +8,18 @@ Welcome to the Document Processing API! This application allows users to upload 
 
 ### Upload and Retrieve Files
 - **`POST /api/upload/`**: Accepts image and PDF files in Base64 format and saves them to the server.
-- **`GET /api/images/`**: Returns a list of all uploaded images.
-- **`GET /api/pdfs/`**: Returns a list of all uploaded PDFs.
+- **`GET /api/image/`**: Returns a list of all uploaded images.
+- **`GET /api/pdf/`**: Returns a list of all uploaded PDFs.
 
 ### File Details
-- **`GET /api/images/{id}/`**: Returns details of a specific image (location, dimensions, channels).
-- **`GET /api/pdfs/{id}/`**: Returns details of a specific PDF (location, number of pages, dimensions).
+- **`GET /api/image/{id}/`**: Returns details of a specific image (location, dimensions, channels).
+- **`GET /api/pdf/{id}/`**: Returns details of a specific PDF (location, number of pages, dimensions).
 
 ### File Operations
-- **`DELETE /api/images/{id}/`**: Deletes a specific image.
-- **`DELETE /api/pdfs/{id}/`**: Deletes a specific PDF.
-- **`POST /api/rotate/`**: Rotates an image by a specified angle.
-- **`POST /api/convert-pdf-to-image/`**: Converts a PDF to an image.
-
+- **`DELETE /api/image/{id}/`**: Deletes a specific image.
+- **`DELETE /api/pdf/{id}/`**: Deletes a specific PDF.
+- **`POST /api/rotate/rotate/`**: Rotates an image by a specified angle.
+- **`POST /api/convert/convert-pdf-to-image/`**: Converts a PDF to an image.
 ---
 
 ## Requirements
@@ -36,7 +35,7 @@ Welcome to the Document Processing API! This application allows users to upload 
 1. **Clone the Repository**:
    ```bash
    git clone <repository-url>
-   cd document-processing-api
+   cd project-name
 
 ## URLS
   - **url documentaion** : https://documenter.getpostman.com/view/31929307/2sAYJ9BecZ
