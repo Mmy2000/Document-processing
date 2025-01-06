@@ -37,17 +37,17 @@ class UploadFileView(APIView):
 class FileListView(APIView):
     def get(self, request, file_type):
         files = UploadedFile.objects.filter(file_type=file_type)
-        return Response(UploadedFileSerializer(files, many=True).data)
+        return Response(UploadedFileSerializer(files, many=True,context={'request':request}).data)
 
 class FileDetailView(APIView):
     def get(self, request, file_type, pk):
         file = get_object_or_404(UploadedFile, pk=pk, file_type=file_type)
         if file_type == 'image':
             details = get_object_or_404(ImageDetails, file=file)
-            serializer = ImageDetailsSerializer(details)
+            serializer = ImageDetailsSerializer(details,context={'request':request})
         elif file_type == 'pdf':
             details = get_object_or_404(PDFDetails, file=file)
-            serializer = PDFDetailsSerializer(details)
+            serializer = PDFDetailsSerializer(details,context={'request':request})
         return Response(serializer.data)
 
     def delete(self, request, file_type, pk):

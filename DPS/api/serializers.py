@@ -14,15 +14,17 @@ class UploadedFileSerializer(serializers.ModelSerializer):
 
 
 class ImageDetailsSerializer(serializers.ModelSerializer):
+    file = UploadedFileSerializer()
     class Meta:
         model = ImageDetails
-        fields = "__all__"
+        fields = ["width", "height", "channels", "file"]
 
 
 class PDFDetailsSerializer(serializers.ModelSerializer):
+    file = UploadedFileSerializer()
     class Meta:
         model = PDFDetails
-        fields = "__all__"
+        fields = ["pages", "page_width", "page_height", "file"]
 
 class Base64FileSerializer(serializers.ModelSerializer):
     file_data = serializers.CharField(write_only=True)
