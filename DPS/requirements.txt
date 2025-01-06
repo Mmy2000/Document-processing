@@ -3,3 +3,4 @@ psycopg2-binary==2.9.9
 django-cors-headers==4.3.1
 djangorestframework==3.14.0
 pillow==10.2.0
+PyPDF2==3.0.1
