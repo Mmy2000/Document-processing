@@ -25,7 +25,7 @@ Welcome to the Document Processing API! This application allows users to upload 
 ## Requirements
 
 - **Backend Framework**: Django, Django Rest Framework (DRF)
-- **Database**: SQLite (default, can be updated)
+- **Database**: SQLite (default, can be updated) & Postgresql
 - **Deployment**: Dockerized for easy deployment
 
 ---
